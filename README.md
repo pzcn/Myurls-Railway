@@ -6,9 +6,12 @@
 
 ### 部署
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fpzcn%2FMyurls-Railway&plugins=redis&envs=ENV_DOMAIN%2CENV_TTL%2CPORT&ENV_DOMAINDesc=Your+domain.&ENV_TTLDesc=Short+link+validity+period+%28day%29&PORTDesc=DO+NOT+CHANGE&ENV_TTLDefault=180&PORTDefault=80)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/rNhsEU?referralCode=MikuFun)
 
-通过上方链接一键部署到Railway，并填入以下参数
+- 点击上方图片跳转 Railway
+- 登陆你的 Github 账号
+- 填写你要创建的库名  
+- 添加自定义域名至 `DOMAIN` 
 
 参数说明：
 
@@ -18,7 +21,10 @@
 
 ### 添加域名
 
-在Cloudflare中添加域名，并配置SSL/TLS为完全及以上，并在Railway中接入该域名，参考[官方文档](https://docs.railway.app/deploy/exposing-your-app#lets-encrypt-ssl-certificates)。
+- 在 Cloudflare 中添加 `Cname` 解析指向 `myurls-production.up.railway.app`
+- 并配置 `SSL/TLS` 的 **加密模式** 为 **完全** 或 **完全（严格）**
+- 在 `Railway` 的 `Settings - Domains` 中接入该域名
+> 具体配置请参考[官方文档](https://docs.railway.app/deploy/exposing-your-app#lets-encrypt-ssl-certificates)。
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -27,3 +33,7 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Log
+- 2022-09-10
+    - `[^]`：原本一键部署报错 “template is not an available Railway plugin”，故重新构建了一个脚本。原本失效愿意应该和 Railway 有关。
