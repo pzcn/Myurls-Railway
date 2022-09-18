@@ -20,7 +20,8 @@
 ### 绑定域名
 > 简述，具体配置请参考[官方文档](https://docs.railway.app/deploy/exposing-your-app#lets-encrypt-ssl-certificates)。
 
-- 在 Cloudflare 中添加 `Cname` 解析指向 `myurls-production.up.railway.app`
+- 在 Cloudflare 中添加 `Cname` 解析指向 `yourapp.yourrailwayproject.com` 
+    - 可能长这样 `https://xxxx-xxxxx.xx.railway.app/`
 - 并配置 `SSL/TLS` 的 **加密模式** 为 **完全** 或 **完全（严格）**
 - 在 `Railway` 的 `Settings - Domains` 中接入该域名
 
